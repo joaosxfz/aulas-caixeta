@@ -13,6 +13,11 @@ inicio
   leia(altura)
   altura <- altura * altura
   resultado <- peso / altura
-  escreva(resultado)
+  escreva("Seu imc é: " resultado)
+  leia(resultado)
+
+  se resultado = =< 18.5 entao
+     resultado <-
+  fimse
 
 fimalgoritmo
