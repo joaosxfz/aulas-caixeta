@@ -27,7 +27,7 @@ inicio
   senao
   escreval("Condição = Obeso")
   fimse
-  fimse
+  fimse 
   fimse
 
 fimalgoritmo
