@@ -1,33 +1,33 @@
-algoritmo "IMC"
+algoritmo "Pagamento_Produto"
 
 var
-  altura, peso, resultado: real
+   preco, total: real
+   codigo: inteiro
 
 inicio
 
-  escreval("Digite seu Peso: ")
-  leia(peso)
-
-  escreval("Digite sua Altura: ")
-  leia(altura)
-
-  altura <- altura * altura
-  resultado <- peso / altura
-
-  escreval("Seu imc é: ", resultado:0:2)
-
-  se resultado < 18.5 entao
-  escreval("Condição = Abaixo do Peso")
-  senao
-  se resultado <= 25 entao
-  escreval("Condição = Peso Normal")
-  senao
-  se resultado <= 30 entao
-  escreval("Condição = Acima do Peso")
-  senao
-  escreval("Condição = Obeso")
-  fimse
-  fimse
-  fimse
+   escreva("Digite o preço do produto: ")
+   leia(preco)
+   escreva("Digite o código de pagamento (1 a 4): ")
+   leia(codigo)
+   se codigo = 1 entao
+      total <- preco * 0.90
+   fimse
+   se codigo = 2 entao
+      total <- preco * 0.95
+   fimse
+   se codigo = 3 entao
+      total <- preco
+      escreva("2x de: ", total/2)
+   fimse
+   se codigo = 4 entao
+      total <- preco * 1.10
+      escreva("3x de: ", total/3)
+   fimse
+   se codigo >= 1 e codigo <= 4 entao
+      escreva("Valor final: ", total)
+   senao
+      escreva("Código inválido")
+   fimse
 
 fimalgoritmo
