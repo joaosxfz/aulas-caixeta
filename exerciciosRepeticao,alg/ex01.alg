@@ -1,4 +1,4 @@
-l) Escreva uma Programa que receba a idade de 10 pessoas, calcule e imprima a quantidade
+l Escreva uma Programa que receba a idade de 10 pessoas, calcule e imprima a quantidade
 de pessoas maiores de idade (idade >= 18 anos).
 
 algoritmo "idade"
@@ -11,7 +11,7 @@ var
 inicio
    contador <- 0
 
-   para i de 1 ate 10 faca
+   para i sde 1 ate 10 faca
       escreval("Digite a idade: ")
       leia(idade)
 
