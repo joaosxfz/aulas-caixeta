@@ -11,52 +11,54 @@ O sistema deve finalizar a entrada de dados quando a idade for igual a 0.
 algoritmo "campeonato"
 
 var
-  idade, totaljogadores, somaidade, menores18, mais80kg: inteiro
-  peso, altura, somaaltura: real
+  idade, cont, contMenor18, contPeso80: inteiro
+  peso, altura, somaIdade, somaAltura, mediaIdade, mediaAltura: real
 
 inicio
+  cont <- 0
+  contMenor18 <- 0
+  contPeso80 <- 0
+  somaIdade <- 0
+  somaAltura <- 0
 
-  totaljogadores <- 0
-  somaidade <- 0
-  somaaltura <- 0
-  menores18 <- 0
-  mais80kg <- 0
-
-  escreva("digite a idade do jogador (0 para parar): ")
+  escreval("Digite a idade (0 para parar): ")
   leia(idade)
 
   enquanto idade <> 0 faca
 
-    escreva("digite o peso: ")
+    escreval("Digite o peso: ")
     leia(peso)
 
-    escreva("digite a altura: ")
+    escreval("Digite a altura: ")
     leia(altura)
 
-    totaljogadores <- totaljogadores + 1
-    somaidade <- somaidade + idade
-    somaaltura <- somaaltura + altura
+    cont <- cont + 1
+    somaIdade <- somaIdade + idade
+    somaAltura <- somaAltura + altura
 
     se idade < 18 entao
-      menores18 <- menores18 + 1
+      contMenor18 <- contMenor18 + 1
     fimse
 
     se peso > 80 entao
-      mais80kg <- mais80kg + 1
+      contPeso80 <- contPeso80 + 1
     fimse
 
-    escreva("digite a idade do jogador (0 para parar): ")
+    escreval("Digite a idade (0 para parar): ")
     leia(idade)
 
   fimenquanto
 
-  se totaljogadores > 0 entao
-    escreva("menores de 18: ", menores18)
-    escreva("media das idades: ", somaidade / totaljogadores)
-    escreva("media das alturas: ", somaaltura / totaljogadores)
-    escreva("jogadores acima de 80kg: ", mais80kg)
+  se cont > 0 entao
+    mediaIdade <- somaIdade / cont
+    mediaAltura <- somaAltura / cont
+
+    escreval("Menores de 18: ", contMenor18)
+    escreval("Media das idades: ", mediaIdade)
+    escreval("Media das alturas: ", mediaAltura)
+    escreval("Mais de 80kg: ", contPeso80)
   senao
-    escreva("nenhum jogador informado.")
+    escreval("Nenhum jogador informado.")
   fimse
 
 fimalgoritmo

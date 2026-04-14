@@ -11,66 +11,62 @@ C. qual a média de acidentes de trânsito nas cidades com menos de
 O sistema deve finalizar a entrada de dados quando o código da cidade for igual a 
 0
 
-algoritmo "estatistica_cidades"
+algoritmo "estatistica_transito"
 
 var
-  codigo, veiculos, acidentes: inteiro
-  totalcidades, somaveiculos: inteiro
-  maiorindice, indice: real
-  somaacidentesmenor2000, qtdmenor2000: inteiro
+  codigo: inteiro
+  veiculos, acidentes: inteiro
+  somaVeiculos, somaAcidentesMenor2000: inteiro
+  contCidades, contMenor2000: inteiro
+  maiorIndice: real
+  mediaVeiculos, mediaAcidentesMenor2000, indice: real
 
 inicio
+  somaVeiculos <- 0
+  somaAcidentesMenor2000 <- 0
+  contCidades <- 0
+  contMenor2000 <- 0
+  maiorIndice <- 0
 
-  totalcidades <- 0
-  somaveiculos <- 0
-  maiorindice <- 0
-  somaacidentesmenor2000 <- 0
-  qtdmenor2000 <- 0
-
-  escreva("digite o codigo da cidade (0 para parar): ")
+  escreval("Codigo da cidade (Qualquer número) e (0 para parar): ")
   leia(codigo)
 
   enquanto codigo <> 0 faca
 
-    escreva("numero de veiculos: ")
+    escreval("Numero de veiculos: ")
     leia(veiculos)
 
-    escreva("numero de acidentes: ")
+    escreval("Numero de acidentes: ")
     leia(acidentes)
 
-    totalcidades <- totalcidades + 1
-    somaveiculos <- somaveiculos + veiculos
+    contCidades <- contCidades + 1
+    somaVeiculos <- somaVeiculos + veiculos
 
-    se veiculos > 0 entao
-      indice <- acidentes / veiculos
+    indice <- acidentes / veiculos
 
-      se indice > maiorindice entao
-        maiorindice <- indice
-      fimse
+    se indice > maiorIndice entao
+      maiorIndice <- indice
     fimse
 
     se veiculos < 2000 entao
-      somaacidentesmenor2000 <- somaacidentesmenor2000 + acidentes
-      qtdmenor2000 <- qtdmenor2000 + 1
+      somaAcidentesMenor2000 <- somaAcidentesMenor2000 + acidentes
+      contMenor2000 <- contMenor2000 + 1
     fimse
 
-    escreva("digite o codigo da cidade (0 para parar): ")
+    escreval("Codigo da cidade (0 para parar): ")
     leia(codigo)
 
   fimenquanto
 
-  se totalcidades > 0 entao
-    escreva("maior indice de acidentes: ", maiorindice)
-    escreva("media de veiculos: ", somaveiculos / totalcidades)
+  se contCidades > 0 entao
+    mediaVeiculos <- somaVeiculos / contCidades
+    escreval("Maior indice de acidentes: ", maiorIndice)
+    escreval("Media de veiculos: ", mediaVeiculos)
+  fimse
 
-    se qtdmenor2000 > 0 entao
-      escreva("media de acidentes (menos de 2000 veiculos): ", somaacidentesmenor2000 / qtdmenor2000)
-    senao
-      escreva("nenhuma cidade com menos de 2000 veiculos.")
-    fimse
-
-  senao
-    escreva("nenhum dado informado.")
+  se contMenor2000 > 0 entao
+    mediaAcidentesMenor2000 <- somaAcidentesMenor2000 / contMenor2000
+    escreval("Media de acidentes (cidades < 2000 veiculos): ", mediaAcidentesMenor2000)
   fimse
 
 fimalgoritmo

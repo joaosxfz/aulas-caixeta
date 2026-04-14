@@ -6,10 +6,11 @@ var
   i: inteiro
 
 inicio
-  para i de 3 ate 30 faca
-    se i mod 3 = 0 entao
-      escreval(i)
-    fimse
-  fimpara
+  i <- 3
+
+  enquanto i <= 30 faca
+    escreva(i"|")
+    i <- i + 3
+  fimenquanto
 
 fimalgoritmo

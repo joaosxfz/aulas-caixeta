@@ -4,19 +4,20 @@ o fatorial de n (n!).
 algoritmo "fatorial"
 
 var
-  alavanca, ok: inteiro
-  fat: inteiro
+  n, i, fat: inteiro
 
 inicio
-  escreva("Digite um valor inteiro positivo: ")
-  leia(alavanca)
+  escreva("Digite um valor: ")
+  leia(n)
 
   fat <- 1
+  i <- 1
 
-  para ok de 1 ate alavanca faca
-    fat <- fat * ok
-  fimpara
+  enquanto i <= n faca
+    fat <- fat * i
+    i <- i + 1
+  fimenquanto
 
-  escreval("Fatorial = ", fat)
+  escreva("Fatorial = ", fat)
 
 fimalgoritmo
