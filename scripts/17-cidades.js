@@ -48,6 +48,6 @@ let mediaAcidentesMenos2000 = somaAcidentesMenos2000 / qtdCidadesMenos2000
 
 alert(
     "Maior índice de acidentes: " + maiorIndice +
-    "\nMédia de veículos: " + mediaVeiculos +
-    "\nMédia de acidentes (<2000 veículos): " + mediaAcidentesMenos2000
+    "Média de veículos: " + mediaVeiculos +
+    "Média de acidentes (<2000 veículos): " + mediaAcidentesMenos2000
 )

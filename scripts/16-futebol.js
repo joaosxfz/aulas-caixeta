@@ -42,7 +42,7 @@ let mediaAltura = somaAltura / qtdJogadores
 
 alert(
     "Menores de 18: " + qtdMenor18 +
-    "\nMédia de idade: " + mediaIdade +
-    "\nMédia de altura: " + mediaAltura +
-    "\nMais de 80kg: " + qtdPeso80
+    "Média de idade: " + mediaIdade +
+    "Média de altura: " + mediaAltura +
+    "Mais de 80kg: " + qtdPeso80
 )

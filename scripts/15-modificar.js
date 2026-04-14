@@ -36,6 +36,6 @@ let percentualE = (qtdE / 10) * 100
 
 alert(
     "Quantidade de D: " + qtdD +
-    "\nQuantidade de A ou B: " + qtdAB +
-    "\nPercentual de E: " + percentualE + "%"
+    "Quantidade de A ou B: " + qtdAB +
+    "Percentual de E: " + percentualE + "%"
 )
