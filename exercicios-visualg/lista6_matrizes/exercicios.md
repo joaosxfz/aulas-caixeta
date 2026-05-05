@@ -80,7 +80,6 @@ fimalgoritmo
 ```
 
 ## 4. Faça um algoritmo que leia 6 números inteiros e mostre os valores do vetor na ordem inversa.
-
 ```bash
 algoritmo "seis_numeros"
 
@@ -103,5 +102,35 @@ inicio
 
 
   fimpara
+fimalgoritmo
+```
+
+## 5. Desenvolva um algoritmo que leia 10 números inteiros e conte quantos são pares
+```bash
+algoritmo "dez_numeros"
+
+var
+  vet10: vetor[1..10] de inteiro
+  contador: inteiro
+  pares: inteiro
+
+inicio
+
+  pares <- 0
+
+
+  escreva("Digite um número ", contador, ": ")
+  para contador de 1 ate 10 faca
+    leia(vet10[contador])
+  fimpara
+
+  para contador de 1 ate 10 faca
+    se vet10[contador] mod 2 = 0 entao
+      pares <- pares + 1
+    fimse
+  fimpara
+
+  escreva("Quantidade de pares: ", pares)
+
 fimalgoritmo
 ```
