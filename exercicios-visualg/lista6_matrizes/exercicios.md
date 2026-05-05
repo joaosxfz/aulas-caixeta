@@ -13,13 +13,13 @@ inicio
   para contador de 1 ate 10 faca
     escreva("Digite um número", contador, ": ")
     leia(vet10[contador])
+    fimpara
     para contador de 1 ate 10 faca
       escreval(vet10[contador])
 
-    fimpara
+    
   fimpara
 fimalgoritmo
-
 ```
 
 ## 2. Crie um algoritmo que leia 5 números reais em um vetor e calcule e mostre a soma de todos os valores.
