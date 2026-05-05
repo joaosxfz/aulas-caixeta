@@ -134,3 +134,50 @@ inicio
 
 fimalgoritmo
 ```
+
+## 6. Crie um algoritmo que leia uma matriz 3x3 de números inteiros e mostre a matriz formatada.
+```bash
+algoritmo "matriz3x3"
+var
+  mat: vetor[1..3, 1..3] de inteiro
+  linha, coluna: inteiro
+inicio
+  para linha de 1 ate 3 faca
+    para coluna de 1 ate 3 faca
+      escreva("Digite [", linha, "][", coluna, "]: ")
+      leia(mat[linha, coluna])
+    fimpara
+  fimpara
+
+  para linha de 1 ate 3 faca
+    para coluna de 1 ate 3 faca
+      escreva(mat[linha, coluna], " ")
+    fimpara
+    escreval("")
+  fimpara
+fimalgoritmo
+```
+
+## 7. Faça um algoritmo que leia uma matriz 2x2 e calcule a soma de todos os elementos.
+```bash
+algoritmo "soma2x2"
+var
+  mat: vetor[1..2, 1..2] de inteiro
+  linha, coluna: inteiro
+  soma: inteiro
+inicio
+  para linha de 1 ate 2 faca
+    para coluna de 1 ate 2 faca
+      escreva("Digite [", linha, "][", coluna, "]: ")
+      leia(mat[linha, coluna])
+    fimpara
+  fimpara
+  soma <- 0
+  para linha de 1 ate 2 faca
+    para coluna de 1 ate 2 faca
+      soma <- soma + mat[linha, coluna]
+    fimpara
+  fimpara
+  escreval("Soma: ", soma)
+fimalgoritmo
+```
