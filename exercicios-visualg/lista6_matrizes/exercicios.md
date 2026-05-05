@@ -42,5 +42,39 @@ inicio
   fimpara
   escreval(soma)
 fimalgoritmo
+```
 
+## 3. Elabore um algoritmo que leia 8 números inteiros em um vetor e informe qual é o maior e o menor valor.
+```bash
+algoritmo "oito_numeros"
+
+var
+  vet8: vetor[1..8] de inteiro
+  contador: inteiro
+  maiorV: inteiro
+  menorV: inteiro
+
+inicio
+
+  para contador de 1 ate 8 faca
+    escreva("Digite um número", contador, ": ")
+    leia(vet8[contador])
+  fimpara
+
+  maiorV <- vet8[1]
+  menorV <- vet8[1]
+
+  para contador de 1 ate 8 faca
+
+    se vet8[contador] > maiorV entao
+      maiorV <- vet8[contador]
+    fimse
+
+    se vet8[contador] < menorV entao
+      menorV <- vet8[contador]
+    fimse
+  fimpara
+
+  escreval("Maior :" maiorV, " Menor: " menorV)
+fimalgoritmo
 ```
