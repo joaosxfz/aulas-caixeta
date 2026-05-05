@@ -78,3 +78,30 @@ inicio
   escreval("Maior :" maiorV, " Menor: " menorV)
 fimalgoritmo
 ```
+
+## 4. Faça um algoritmo que leia 6 números inteiros e mostre os valores do vetor na ordem inversa.
+
+```bash
+algoritmo "seis_numeros"
+
+var
+  vet6: vetor[1..6] de inteiro
+  contador: inteiro
+
+inicio
+
+  para contador de 1 ate 6 faca
+
+    escreva("Digite um número", contador, ": ")
+    leia(vet6[contador])
+
+  fimpara
+
+  para contador de 6 ate 1 passo -1 faca
+
+    escreval(vet6[contador])
+
+
+  fimpara
+fimalgoritmo
+```
